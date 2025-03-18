@@ -16,8 +16,8 @@
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
 
-        fbq('init', '9473507609359104'); // ID del Pixel actualizado
-        fbq('track', 'ViewContent'); // Evento cuando alguien entra a la página
+        fbq('init', '9473507609359104'); // Nuevo ID del Pixel
+        fbq('track', 'ViewContent'); // Evento legítimo de Facebook
     </script>
     <noscript>
         <img height="1" width="1" style="display:none"
@@ -26,8 +26,11 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const whatsappURL = "https://wa.me/5491171836710?text=Hola,%20quisiera%20un%20usuario.%20¿En%20qué%20consiste%20el%20bono%20de%20bienvenida?";
-            
+            const whatsappNumber = "5491171836710"; // Número de WhatsApp
+            const message = "Hola, vengo por el bono de bienvenida del 𝟐𝟎𝟎%, ¿me creas un usuario?";
+ const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+
             // Redirigir inmediatamente a WhatsApp
             window.location.href = whatsappURL;
         });
